@@ -3,29 +3,28 @@ package com.bridgelabz.logical;
 import java.util.Scanner;
 
 public class PrimeNumber {
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         int temp;
-        boolean isPrime=true;
-        Scanner scan= new Scanner(System.in);
+        boolean isPrime = true;
+        Scanner scan = new Scanner(System.in);
         System.out.println("Enter any number:");
         //capture the input in an integer
-        int num=scan.nextInt();
+        int num = scan.nextInt();
         //number is not divisible by more than its half
-        for(int i=2;i<=num/2;i++)
-        {
-            temp=num%i;//divisible by i then not prime
-            if(temp==0)
-            {
-                isPrime=false;
+        for (int i = 2; i <= num / 2; i++) {
+            temp = num % i;//divisible by i then not prime
+            if (temp == 0) {
+                isPrime = false;
                 break;
             }
         }
         //If isPrime is true then the number is prime else not
-        if(isPrime)
+        if (isPrime)
             System.out.println(num + " is a Prime Number");
         else
             System.out.println(num + " is not a Prime Number");
 
 
     }
+}
+
